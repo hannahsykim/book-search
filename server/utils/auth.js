@@ -33,4 +33,3 @@ module.exports = {
   },
 };
 
-// Path: Develop/server/schemas/resolvers.js
