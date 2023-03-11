@@ -21,7 +21,7 @@ Github repository:
 https://github.com/hannahsykim/book-search
 
 Deployed application: 
-https://mern-books-app.herokuapp.com/
+https://mern-book-search.netlify.app/
 
 ## Visual <a id="visual"></a>
 <img width="1624" alt="Screenshot 2023-03-11 at 12 37 12 AM" src="https://user-images.githubusercontent.com/113808775/224474387-bec60a88-aefe-4df8-ae6d-698eba1d3f0f.png">
