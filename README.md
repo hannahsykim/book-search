@@ -24,7 +24,8 @@ Deployed application:
 https://mern-books-app.herokuapp.com/
 
 ## Visual <a id="visual"></a>
-<img width="1558" alt="Screenshot 2023-02-27 at 11 05 54 PM" src="https://user-images.githubusercontent.com/113808775/221779275-29660fb7-c09d-48fa-b6b7-4dbc1b424ad3.png">
+<img width="1624" alt="Screenshot 2023-03-11 at 12 37 12 AM" src="https://user-images.githubusercontent.com/113808775/224474387-bec60a88-aefe-4df8-ae6d-698eba1d3f0f.png">
+
 
 ## Technologies Used <a id="technologies"></a>
 React
