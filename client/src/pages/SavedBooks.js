@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
+import React from 'react';
+import { 
+  Container, 
+  Col,  
+  Button, 
+  Card, 
+} from 'react-bootstrap';
 
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
@@ -25,15 +30,10 @@ const SavedBooks = () => {
     }
 
     try {
-      const { data } = await deleteBook(bookId, token);
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
-
-      const updatedUser = await response.json();
-      setUserData(updatedUser);
-      // upon success, remove book's id from localStorage
+      const { data } = await deleteBook({
+        variables: { bookId },
+      });
+      
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
@@ -47,18 +47,18 @@ const SavedBooks = () => {
 
   return (
     <>
-      <Jumbotron fluid className='text-light bg-dark'>
+      <div className='text-light bg-dark p-5'>
         <Container>
           <h1>Viewing saved books!</h1>
         </Container>
-      </Jumbotron>
+      </div>
       <Container>
         <h2>
           {userData.savedBooks.length
             ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
             : 'You have no saved books!'}
         </h2>
-        <CardColumns>
+        <Col>
           {userData.savedBooks.map((book) => {
             return (
               <Card key={book.bookId} border='dark'>
@@ -74,7 +74,7 @@ const SavedBooks = () => {
               </Card>
             );
           })}
-        </CardColumns>
+        </Col>
       </Container>
     </>
   );
